@@ -1,0 +1,16 @@
+http://www.w3.org/MarkUp/DTD/xhtml
+http://www.w3.org/1999/xhtml
+http://www.washington.edu/students/reg/calendar.html
+http://www.washington.edu/students/crscat/cse.html
+https://www.ee.washington.edu/class/index.html
+https://www.ee.washington.edu/class/index.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
+https://www.ee.washington.edu/class/index.html
+https://www.ee.washington.edu/class/index.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
+http://www.washington.edu/students/crscat/cse.html
