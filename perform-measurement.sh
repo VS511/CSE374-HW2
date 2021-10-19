@@ -12,10 +12,3 @@ else
   echo "0"
   exit 1
 fi
-
-#if curl --output /dev/null --silent --head --fail "$1"; then
- # wget -q -O - "$1" | wc -c
- # exit 0
-#else
- # echo "0"
-#fi
