@@ -1,17 +1,14 @@
 #!/bin/bash
 
-SCRIPT_PATH="/perform-measurement.sh"
-
-if [ $# -ne 2 ]; then
-    echo “$0 Requires 2 arguments” >&2
-    exit 1
-fi
-
-if [ ! -f $2 ]; then
-    echo "File does not exist" <& 1
-    exit 1
-fi
-
-for line in courselist.txt
-    source $SCRIPT_PATH
-done < filesizes.txt
+while read line; do
+    for word in $line; do
+        echo "Performing byte-size measurement on $word..."
+        size=$(./perform-measurement.sh $word) > /dev/null
+        if [ $size -lt 1 ]; then
+            echo "...failure"
+        else 
+            echo "...successful"
+            echo "course-number $size" >> $1
+        fi
+    done
+done < $2
