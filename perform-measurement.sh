@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
-if wget -q "$1" > /dev/null; then
+if wget -q "$1" -O /dev/null; then
   wget -q -O - "$1" | wc -c
   exit 0
 else

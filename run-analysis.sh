@@ -3,7 +3,7 @@
 while read line; do
     for word in $line; do
         echo "Performing byte-size measurement on $word..."
-        size=$(./perform-measurement.sh $word) > /dev/null
+        size=$(./perform-measurement.sh $word)
         if [ $size -lt 1 ]; then
             echo "...failure"
         else 
