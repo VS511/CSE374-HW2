@@ -2,13 +2,18 @@
 
 while read line; do
     for word in $line; do
+        echo "$word" > temp
         echo "Performing byte-size measurement on $word..."
-        size=$(./perform-measurement.sh $word)
+        size=$(./perform-measurement $word)
         if [ $size -lt 1 ]; then
             echo "...failure"
         else 
             echo "...successful"
-            echo "course-number $size" >> $1
+            cn=$(grep -o -E "[0-9][0-9][0-9]" temp)
+            echo "$cn $size" >> $1
         fi
     done
 done < $2
+
+rm temp
+exit 0
