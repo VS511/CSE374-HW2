@@ -1,9 +1,14 @@
 #!/bin/bash
 
+if [ $# -ne 2 ]; then
+    echo “$0 Requires 2 arguments” >&2
+    exit 1
+fi
+
 while read line; do
     for word in $line; do
         echo "$word" > temp
-        echo "Performing byte-size measurement on $word..."
+        echo "Performing byte-size measurement on $word"
         size=$(./perform-measurement $word)
         if [ $size -lt 1 ]; then
             echo "...failure"
