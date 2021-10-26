@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# CSE 374 Homework-2, Problem 1
+# Students: Vaibhav Singh & David Maltby
+# Date: 10/21/2021
+
 if [ $# -ne 2 ]; then
     echo “$0 Requires 2 arguments” >&2
     exit 1

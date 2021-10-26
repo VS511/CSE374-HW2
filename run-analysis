@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# CSE 374 Homework-2, Problem 3
+# Students: Vaibhav Singh & David Maltby
+# Date: 10/21/2021
+
 while read line; do
     for word in $line; do
         echo "$word" > temp
