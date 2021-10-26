@@ -4,6 +4,16 @@
 # Students: Vaibhav Singh & David Maltby
 # Date: 10/21/2021
 
+if [ $# -ne 2 ]; then
+    echo “$0 Requires 2 arguments” >&2
+    exit 1
+fi
+
+if [ ! -f $2 ]; then
+    echo "File does not exist" <& 1
+    exit 1
+fi
+
 while read line; do
     for word in $line; do
         echo "$word" > temp
