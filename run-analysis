@@ -1,10 +1,25 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
+# CSE 374 Homework-2, Problem 3
+# Students: Vaibhav Singh & David Maltby
+# Date: 10/21/2021
+
+>>>>>>> 696ac116a11eca9b15debab6cbccc3b6c3b13600
 if [ $# -ne 2 ]; then
     echo “$0 Requires 2 arguments” >&2
     exit 1
 fi
 
+<<<<<<< HEAD
+=======
+if [ ! -f $2 ]; then
+    echo "File does not exist" <& 1
+    exit 1
+fi
+
+>>>>>>> 696ac116a11eca9b15debab6cbccc3b6c3b13600
 while read line; do
     for word in $line; do
         echo "$word" > temp
